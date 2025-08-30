@@ -1,0 +1,131 @@
+    $darkGrey: hsl(234, 12%, 34%);
+    $lightGrey: hsl(212, 6%, 44%);
+    $white: hsl(0, 0%, 100%);
+    $red: hsl(0, 78%, 62%);
+    $cyan: hsl(180, 62%, 55%);
+    $blue: hsl(212, 86%, 64%);
+    $orange: hsl(34, 97%, 64%);
+    
+    * {
+        font-family: Poppins, Arial;
+    }
+
+    body {
+        padding-left: 170px;
+        padding-right: 170px;
+    }
+
+    header-wrapper {
+        display: grid;
+        place-items: center;
+        margin-top: 70px;
+    }
+
+    header {
+        height: 180px;
+        width: 555px;
+        text-align: center;
+        h1 {
+            color: $darkGrey;
+            font-size: 36px;
+            line-height: 140%;
+            letter-spacing: 0.25px;
+            font-weight: 200;
+            margin: 0px;
+        }
+        h2 {
+            color: $darkGrey;
+            font-size: 36px;
+            line-height: 140%;
+            letter-spacing: 0.25px;
+            font-weight: 600;
+            margin: 0px;
+        }
+        p {
+            color: $darkGrey;
+            font-size: 15px;
+            line-height: 140%;
+            letter-spacing: 0;
+            font-weight: 400;
+            margin: 0px;
+        }
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        gap: 32px;
+    }
+
+    @mixin card($top) {
+        padding: 32px;
+        height: 250px;
+        border-radius: 8px;
+        border-top: $top;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+
+    .supervisor {
+        grid-column: 1;
+        grid-row: 2 / 4;
+        @include card(5px solid $cyan);
+    }
+
+    .teambuilder {
+        grid-column: 2;
+        grid-row: 1 / 3;
+        @include card(5px solid $red);
+    }
+
+    .karma {
+        grid-column: 2;
+        grid-row: 3 / 5;
+        @include card(5px solid $orange);
+    }
+
+    .calculator {
+        grid-column: 3;
+        grid-row: 2 / 4;
+        @include card(5px solid $blue);
+    }
+
+    .title {
+        color: $darkGrey;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 135%;
+        letter-spacing: 0px;
+    }
+
+    .description {
+        color: $darkGrey;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 160%;
+        letter-spacing: 0px;
+    }
+
+    img {
+        height: 64px;
+        width: 64px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
