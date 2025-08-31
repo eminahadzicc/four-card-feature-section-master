@@ -60,7 +60,6 @@
 
     @mixin card($top) {
         padding: 32px;
-        height: 250px;
         border-radius: 8px;
         border-top: $top;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -110,6 +109,10 @@
     img {
         height: 64px;
         width: 64px;
+    }
+
+    .icon {
+        text-align: right;
     }
 
 
