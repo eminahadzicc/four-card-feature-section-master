@@ -115,20 +115,95 @@
         text-align: right;
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+
+    @media (min-width: 600px) and (max-width: 1023px) {
+  body {
+    padding-left: 32px;
+    padding-right: 32px;
+    margin: 0;
+  }
+
+  header-wrapper { 
+    margin-top: 48px; 
+    }
+
+  header {
+    width: min(100%, 40rem); 
+    height: auto;             
+    text-align: center;
+  }
+
+  main {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr); 
+    gap: 28px;
+    margin-block: 40px;
+  }
+
+  .supervisor {
+        grid-column: 1;
+        grid-row: 2 / 4;
+        padding: 15px;
+  }
+  .teambuilder {
+        grid-column: 2;
+        grid-row: 1 / 3;
+        padding: 15px;
+  }
+  .karma {
+        grid-column: 3;
+        grid-row: 2 / 4;
+        padding: 15px;
+  }
+  .calculator {
+        grid-column: 2;
+        grid-row: 3 / 5;
+        padding: 15px;
+  }
+}
+
+@media (max-width: 599px) {
+  body {
+    padding-left: 16px;
+    padding-right: 16px;
+    margin: 0;
+  }
+
+  header-wrapper {
+    margin-top: 40px;
+  }
+
+  header {
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+
+  header h1,
+  header h2 {
+    font-size: clamp(24px, 4.2vw, 32px);
+    line-height: 1.4;
+  }
+
+  header p {
+    font-size: clamp(14px, 3.5vw, 15px);
+    line-height: 1.6;
+  }
+
+  main {
+    grid-template-columns: 1fr; 
+    gap: 24px;
+    margin-block: 32px;
+  }
+
+  .supervisor,
+  .teambuilder,
+  .karma,
+  .calculator {
+    grid-column: auto;
+    grid-row: auto;
+    padding: 24px;
+  }
+}
